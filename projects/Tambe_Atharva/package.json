@@ -1,6 +1,7 @@
 {
   "name": "tambe_atharva",
   "version": "1.0.0",
+  "type": "module",
   "description": "- **Name**: Atharva Tambe  \r - **PRN**: 24070122052  \r - **Year**: SY \r - **Branch**: CSE",
   "main": "index.js",
   "scripts": {

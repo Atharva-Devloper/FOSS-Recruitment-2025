@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head') %>
+    <title>Reddit Clone - Home</title>
+</head>
+<body>
+    <%- include('partials/navbar', { subredditList }) %>
+    <div class="container mt-4">
+        <h1 class="mb-4">Welcome to Reddit Clone</h1>
+        <h3>Subreddits</h3>
+        <div class="list-group">
+            <% subredditList.forEach(function(sub) { %>
+                <a href="/r/<%= sub %>" class="list-group-item list-group-item-action">
+                    <strong><%= sub %></strong>
+                </a>
+            <% }); %>
+        </div>
+    </div>
+    <%- include('partials/footer') %>
+</body>
+</html>
