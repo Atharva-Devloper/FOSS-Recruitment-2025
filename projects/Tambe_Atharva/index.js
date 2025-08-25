@@ -24,7 +24,7 @@ const subredditList = Object.keys(redditData);
 
 
 app.get('/', (req, res) => {
-    res.render('index', { subredditList });
+    res.render('home', { subredditList });
 });
 
 // Update /r/:subreddit route

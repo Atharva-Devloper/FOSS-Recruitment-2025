@@ -1,0 +1,49 @@
+/* Body background and font */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Navbar brand color */
+.navbar-brand {
+    font-weight: bold;
+    color: #ff4500 !important;
+}
+
+/* Subreddit list group */
+.list-group-item {
+    transition: background 0.2s;
+}
+.list-group-item:hover {
+    background: #ffe5d0;
+    color: #ff4500;
+}
+
+/* Post cards */
+.card {
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* Footer */
+footer {
+    background: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+/* Headings */
+h1, h3 {
+    color: #ff4500;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+    .container {
+        padding: 0 1rem;
+    }
+}
