@@ -8,7 +8,7 @@ import fs from 'fs';
 const redditData = JSON.parse(
     await fs.promises.readFile('./data.json', 'utf-8')
 );
-
+app.use(express.urlencoded({ extended: true }));
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -17,10 +17,26 @@ app.use(express.static(path.join(__dirname,'public')));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname,'views'));
 
-// ...existing code...
-
-
+const user = { username: 'admin', password: 'admin' };
 const subredditList = Object.keys(redditData);
+
+// Show login page
+app.get('/login', (req, res) => {
+    res.render('login', { subredditList, error: null });
+});
+
+// Handle login form
+app.post('/login', (req, res) => {
+    const { username, password } = req.body;
+    if (username === user.username && password === user.password) {
+        // For offline demo, just redirect to home
+        res.redirect('/');
+    } else {
+        res.render('login', { subredditList, error: 'Invalid username or password' });
+    }
+});
+
+
 
 
 app.get('/', (req, res) => {
@@ -53,5 +69,5 @@ app.get('/r/:subreddit' ,(req ,res)=>{
 // Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}/login`);
 });
