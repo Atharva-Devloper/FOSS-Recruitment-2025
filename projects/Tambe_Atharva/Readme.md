@@ -1,10 +1,10 @@
 # Project Title: Write your project name here
 
 ## Student Details
-- **Name**: Your Full Name  
-- **PRN**: Your PRN  
-- **Year**: FY/SY/TY/Final Year  
-- **Branch**: Your Branch  
+- **Name**: Atharva Tambe  
+- **PRN**: 24070122052  
+- **Year**: SY 
+- **Branch**: CSE  
 
 ---
 
